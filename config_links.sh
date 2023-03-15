@@ -1,9 +1,9 @@
 # !/bin/bash
 
-rm ~/.config/alacritty
+rm -rf ~/.config/alacritty
 ln -s $HOME/dotfiles/.config/alacritty ~/.config/alacritty
 
-rm ~/.config/nvim
+rm -rf ~/.config/nvim
 ln -s $HOME/dotfiles/.config/nvim ~/.config/nvim
 
 

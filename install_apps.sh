@@ -1,6 +1,16 @@
 # !/bin/bash
 
-sudo pacman -S git python3 neovim
+sudo pacman -S python3 neovim alacritty firefox lsd bat base-devel --noconfirm
+
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
+
+sleep 3
+cd ..
+rm -rf yay-bin
+
+yay -S ttf-mononoki-nerd brave-bin --noconfirm
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
