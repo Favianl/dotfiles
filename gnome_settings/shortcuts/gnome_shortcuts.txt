@@ -1,0 +1,7 @@
+[/]
+close=['<Alt>F4', '<Super>0']
+maximize=['<Super>k']
+minimize=['<Super>m']
+switch-to-workspace-left=['<Shift><Super>h']
+switch-to-workspace-right=['<Shift><Super>l']
+unmaximize=['<Super>j']
