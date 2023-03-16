@@ -1,0 +1,38 @@
+
+vimium
+
+# Insert your preferred key mappings here.
+unmap J
+unmap K
+unmap H
+unmap L
+
+map J goForward
+map K goBack
+map L nextTab
+map H previousTab
+
+---------------------
+
+
+Ublock origin
+
+---------------------
+
+Reack Developer Tools
+
+---------------------
+
+Google Translate
+
+---------------------
+
+
+
+
+---------------------
+---------------------
+
+Edge
+
+SpeakIt
