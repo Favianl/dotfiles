@@ -1,6 +1,6 @@
 # !/bin/bash
 
-sudo pacman -S python3 neovim alacritty firefox lsd bat base-devel audacity inkscape vl --noconfirm
+sudo pacman -S python3 neovim alacritty firefox lsd bat base-devel audacity inkscape vlc --noconfirm
 
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
