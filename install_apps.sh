@@ -4,7 +4,7 @@ sudo pacman -S python3 neovim alacritty firefox lsd bat base-devel audacity inks
 
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
-makepkg -si
+makepkg -si --noconfirm
 
 sleep 3
 
@@ -18,5 +18,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 sleep 3
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+
+exit
+
+sleep 2
 
 exit
