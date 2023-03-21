@@ -44,9 +44,9 @@ keymap.set("n", "<S-l>", "<cmd>BufferLineCycleNext<cr>")
 -- prev tab
 keymap.set("n", "<S-h>", "<cmd>BufferLineCyclePrev<cr>")
 -- move tab to right
-keymap.set("n", "<S-A-l>", "<cmd>BufferLineMoveNext<cr>")
+keymap.set("n", "<leader>9", "<cmd>BufferLineMoveNext<cr>")
 -- move tab to left
-keymap.set("n", "<S-A-h>", "<cmd>BufferLineMovePrev<cr>")
+keymap.set("n", "<leader>8", "<cmd>BufferLineMovePrev<cr>")
 -- new tab
 keymap.set("n", "<leader>bb", "<cmd>tabnew<cr>")
 -- pick to close
