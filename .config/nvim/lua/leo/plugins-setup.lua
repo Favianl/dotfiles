@@ -112,12 +112,16 @@ return packer.startup(function(use)
 			require("Comment").setup()
 		end,
 	})
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- indent blankline
 	use("lukas-reineke/indent-blankline.nvim")
 
-	--highligths definitions
+	-- highligths definitions
 	use("RRethy/vim-illuminate")
+
+	-- highligths Code Color
+	use("norcalli/nvim-colorizer.lua")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

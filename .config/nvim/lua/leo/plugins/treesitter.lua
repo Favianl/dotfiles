@@ -21,4 +21,8 @@ treesitter.setup({
 		"vim",
 	},
 	auto_install = true,
+	context_commentstring = {
+		enable = true,
+		enable_autocmd = false,
+	},
 })

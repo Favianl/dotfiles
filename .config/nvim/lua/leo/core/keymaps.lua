@@ -55,3 +55,11 @@ keymap.set("n", "<leader>bc", "<cmd>BufferLinePickClose<cr>")
 keymap.set("n", "<leader>bj", "<cmd>BufferLinePick<cr>")
 -- sort by tabs
 keymap.set("n", "<leader>bt", "<cmd>BufferLineSortByTabs<cr>")
+
+-- Avoid replacing clipboard register
+-- keymap.set("v", "<leader>p", '"_dp')
+
+keymap.set("v", "<leader>p", '"_dhp')
+
+-- keymap.set("v", "<leader>p", '_"0p')
+-- keymap.set("n", "<leader>p", '"0p')

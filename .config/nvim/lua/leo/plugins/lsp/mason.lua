@@ -27,7 +27,7 @@ mason_lspconfig.setup({
 
 mason_null_ls.setup({
 	ensure_installed = {
-		"prettier",
+		-- "prettier",
 		"stylua",
 		-- "eslint_d",
 	},
