@@ -21,12 +21,21 @@ sleep 3
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
+exit
+
+sleep 2
+
+
 rm ~/.bashrc
 ln -s $HOME/dotfiles/.bashrc ~/.bashrc
 
-source ~/.bashrc
+source $HOME/.nvm/nvm.sh
 
 nvm install v16.19.1
 nvm install v18.15.0
 
 nvm use v16.19.1
+
+sleep 2
+
+exit
