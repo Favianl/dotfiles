@@ -37,7 +37,7 @@ y: https://www.youtube.com/results?search_query=%s Youtube
 ---------------------
 
 
-Ublock origin
+uBlock origin
 
 ---------------------
 

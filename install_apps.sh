@@ -1,6 +1,7 @@
 # !/bin/bash
 
-sudo pacman -S python3 neovim alacritty firefox lsd bat base-devel audacity inkscape vlc --noconfirm
+# sudo pacman -S alacritty
+sudo pacman -S python3 neovim kitty firefox lsd bat base-devel vlc ttf-jetbrains-mono --noconfirm
 
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
@@ -11,7 +12,8 @@ sleep 3
 cd ..
 rm -rf yay-bin
 
-yay -S ttf-mononoki-nerd brave-bin --noconfirm
+# yay -S ttf-mononoki-nerd
+yay -S brave-bin --noconfirm
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
@@ -19,8 +21,10 @@ sleep 3
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
-exit
+rm ~/.bashrc
+ln -s $HOME/dotfiles/.bashrc ~/.bashrc
 
-sleep 2
+nvm install v16.19.1
+nvm install v18.15.0
 
-exit
+nvm use v16.19.1

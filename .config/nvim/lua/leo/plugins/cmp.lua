@@ -14,14 +14,25 @@ if not lspkind_status then
 end
 
 -- load snippets from path/of/your/nvim/config/my-cool-snippets
-require("luasnip.loaders.from_vscode").lazy_load({ paths = "./my-snippets/simple-react-snippets" })
-
-require("luasnip.loaders.from_vscode").lazy_load({ paths = "./my-snippets/custom" })
+require("luasnip.loaders.from_vscode").lazy_load({ paths = "./my-snippets/javascript" })
 
 -- load friendly-snippets
 require("luasnip.loaders.from_vscode").lazy_load()
 
 vim.opt.completeopt = "menu,menuone,noselect"
+
+vim.api.nvim_create_autocmd("ModeChanged", {
+	pattern = "*",
+	callback = function()
+		if
+			((vim.v.event.old_mode == "s" and vim.v.event.new_mode == "n") or vim.v.event.old_mode == "i")
+			and luasnip.session.current_nodes[vim.api.nvim_get_current_buf()]
+			and not luasnip.session.jump_active
+		then
+			luasnip.unlink_current()
+		end
+	end,
+})
 
 cmp.setup({
 	snippet = {
@@ -33,12 +44,12 @@ cmp.setup({
 		["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
 		["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
 		["<Tab>"] = cmp.mapping(function(fallback)
-			if luasnip.expandable() then
+			if luasnip.jumpable(1) then
+				luasnip.jump(1)
+			elseif luasnip.expandable() then
 				luasnip.expand()
 			elseif cmp.visible() then
 				cmp.select_next_item()
-			elseif luasnip.jumpable(1) then
-				luasnip.jump(1)
 			else
 				fallback()
 			end

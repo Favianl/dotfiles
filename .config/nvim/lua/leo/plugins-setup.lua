@@ -58,7 +58,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-path")
 
 	--snippets
-	use("L3MON4D3/LuaSnip")
+	use({ "L3MON4D3/LuaSnip", run = "make install_jsregexp" })
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")
 
@@ -120,8 +120,21 @@ return packer.startup(function(use)
 	-- highligths definitions
 	use("RRethy/vim-illuminate")
 
+	-- motions on speed
+	use({
+		"phaazon/hop.nvim",
+		branch = "v2", -- optional but strongly recommended
+		config = function()
+			-- you can configure Hop the way you like here; see :h hop-config
+			require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+		end,
+	})
+
 	-- highligths Code Color
 	use("norcalli/nvim-colorizer.lua")
+
+	-- copilot
+	use("Exafunction/codeium.vim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

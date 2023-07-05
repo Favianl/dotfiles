@@ -63,3 +63,10 @@ keymap.set("v", "<leader>p", '"_dhp')
 
 -- keymap.set("v", "<leader>p", '_"0p')
 -- keymap.set("n", "<leader>p", '"0p')
+--
+
+------------ Hop keymaps ------------------
+
+keymap.set("n", "<leader>hh", "<cmd>HopWord<cr>")
+keymap.set("n", "<leader>ho", "<cmd>HopChar1<cr>")
+keymap.set("n", "<leader>ht", "<cmd>HopChar2<cr>")
