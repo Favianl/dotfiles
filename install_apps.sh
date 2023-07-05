@@ -1,7 +1,7 @@
 # !/bin/bash
 
 # sudo pacman -S alacritty
-sudo pacman -S python3 neovim kitty firefox lsd bat base-devel vlc ttf-jetbrains-mono --noconfirm
+sudo pacman -S python3 neovim kitty firefox lsd bat base-devel vlc ttf-jetbrains-mono-nerd --noconfirm
 
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
@@ -23,6 +23,8 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
 
 rm ~/.bashrc
 ln -s $HOME/dotfiles/.bashrc ~/.bashrc
+
+source ~/.bashrc
 
 nvm install v16.19.1
 nvm install v18.15.0
