@@ -21,16 +21,31 @@ sleep 2
 
 source $HOME/.nvm/nvm.sh
 
-nvm install v16.19.1
-nvm install v18.15.0
+nvm install v16.20.1
+nvm install v18.16.1
 
-nvm use v16.19.1
+nvm use v18.16.1 
 
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+echo "Installing Oh My Bash..."
 
-echo "copying bashrc..."
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)" &
+wait
+
+echo "Linking dotfiles..."
+
+# rm -rf ~/.config/alacritty
+# ln -s $HOME/dotfiles/.config/alacritty ~/.config/alacritty
+
+rm -rf ~/.config/kitty
+ln -s $HOME/dotfiles/.config/kitty ~/.config/kitty
+
+rm -rf ~/.config/nvim
+ln -s $HOME/dotfiles/.config/nvim ~/.config/nvim
 
 rm ~/.bashrc
 ln -s $HOME/dotfiles/.bashrc ~/.bashrc
 
+sleep 2
+
+echo "Done!"
 exit
