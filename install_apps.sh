@@ -17,17 +17,7 @@ yay -S brave-bin --noconfirm
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
-sleep 3
-
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
-
-exit
-
 sleep 2
-
-
-rm ~/.bashrc
-ln -s $HOME/dotfiles/.bashrc ~/.bashrc
 
 source $HOME/.nvm/nvm.sh
 
@@ -36,6 +26,11 @@ nvm install v18.15.0
 
 nvm use v16.19.1
 
-sleep 2
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+
+echo "copying bashrc..."
+
+rm ~/.bashrc
+ln -s $HOME/dotfiles/.bashrc ~/.bashrc
 
 exit
