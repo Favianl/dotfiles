@@ -1,7 +1,7 @@
 # !/bin/bash
 
 # sudo pacman -S alacritty
-sudo pacman -S python3 neovim kitty firefox lsd bat base-devel vlc ttf-jetbrains-mono-nerd --noconfirm
+sudo pacman -S python3 neovim kitty firefox lsd bat base-devel vlc ttf-jetbrains-mono-nerd neofetch --noconfirm
 
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
