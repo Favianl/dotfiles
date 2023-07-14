@@ -41,7 +41,7 @@ uBlock origin
 
 ---------------------
 
-Reack Developer Tools
+React Developer Tools
 
 ---------------------
 
