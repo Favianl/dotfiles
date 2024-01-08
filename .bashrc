@@ -117,6 +117,13 @@ source "$OSH"/oh-my-bash.sh
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 
+# keybindings
+source /usr/share/fzf/key-bindings.bash
+
+# completion
+source /usr/share/fzf/completion.bash
+
+
 # === My Alias ===
 
 alias ls="lsd"
@@ -129,3 +136,5 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.local/bin:$PATH"
 
+#scripts
+export PATH="$PATH:/home/leo/dotfiles/qemu"
